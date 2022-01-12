@@ -8,12 +8,24 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
-  <img
-    src="https://media-exp1.licdn.com/dms/image/C5603AQHc57nlB301dQ/profile-displayphoto-shrink_800_800/0/1597763158199?e=1647475200&amp;v=beta&amp;t=3sHU6dd_2AilnbB6IjsvR8bRv6ee1-s6Dh891Itd52M"
-    loading="" alt="profile image" class="lazy-image imgedit-profile-photo-frame-viewer__target-image ember-view"
-    width="300" height="300">
+  <div id="root">
+    <h1>Hello</h1>
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C5603AQHc57nlB301dQ/profile-displayphoto-shrink_800_800/0/1597763158199?e=1647475200&amp;v=beta&amp;t=3sHU6dd_2AilnbB6IjsvR8bRv6ee1-s6Dh891Itd52M"
+      loading="" alt="profile image" class="lazy-image imgedit-profile-photo-frame-viewer__target-image ember-view"
+      width="300" height="300">
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
 </body>
+<script>
+  var root = document.getElementById("root");
+  fireworksConfig = {
+    delay: {min: 15, max: 15},
+    speed: 10,
+  }
+  var fireworks = new Fireworks(root, fireworksConfig);
+  fireworks.start();
+</script>
 
 </html>
